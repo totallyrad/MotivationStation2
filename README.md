@@ -47,11 +47,11 @@ Copy this inside the file you just created:
 
     [Service]
     Type=idle
-    ExecStart=/usr/bin/python /home/play.py
+    ExecStart=/usr/bin/python /home/MotivationStation2/play.py
 
     [Install]
     WantedBy=multi-user.target
 
 To run the system on boot, do the following:
 
-    systemctl enable playmp3.service
+    sudo systemctl enable playmp3.service
