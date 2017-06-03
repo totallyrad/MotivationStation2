@@ -2,6 +2,8 @@
 
 Mp3Player Based on raspberry pi. If you close the contact on the GPIO17, it plays a system sound "system.mp3" and then one random audio file from a USB stick
 
+Clone into "/home/" directory
+
 Requires
 
     python 3.5
