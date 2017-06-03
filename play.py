@@ -10,12 +10,12 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(17, GPIO.IN, pull_up_down = GPIO.PUD_UP)
-os.system('mpg123 /home/system.mp3')
+os.system('mpg123 /home/MotivationStation2/system.mp3')
 while True:
 
       if GPIO.input(17) ==0:
                       print ("Pulse")      
-                      os.system('/home/mp3.sh')
+                      os.system('/home/MotivationStation2/mp3.sh')
                       time.sleep(1)
 
       time.sleep(0.5)
