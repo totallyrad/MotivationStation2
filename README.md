@@ -1,32 +1,45 @@
 # MotivationStation2
 
-Mp3Player Based on raspberry pi. If you close the contact on the GPIO17, it plays a system sound "system.mp3" and then one random audio file from a USB stick
+Mp3Player Based on raspberry pi. If you close the contact on the GPIO17, it plays one random audio file from a USB stick
 
 Clone into "/home/" directory
 
 Requires
 
-    python 3.5
+    python 3.5??? need to test without it
     mpg123
     RPI.GPIO
   
 System mp3
 
-    A file named "system.mp3" in the same directory as the python script will play before playing a radon mp3 from the USB stick
-    All of the other the mp3's have to be on an usb stick with a directory named "mp3"
+A file named "system.mp3" in the same directory as the python script will play before playing a radon mp3 from the USB stick
+
+All of the other the mp3's have to be on an usb stick in a directory named "mp3"
 
 Mounting USB Stick
 
-    Now create this directory mkdir /mnt/usb 
-    open the file /etc/fstab and add the following line:
+Create this directory 
+
+    mkdir /mnt/usb 
+open the file 
+
+    sudo nano /etc/fstab 
+
+and add the following line:
 
     /dev/sda1 /mnt/usb
+    
+Grant the script execute
+
+    sudo chmod -x /home/MotivationStation2/mp3.sh
   
 Start on boot
 
-  Create a file under /usr/lib/systemd/system and name it “playmp3.service”
+Create a file under /usr/lib/systemd/system and name it “playmp3.service”
 
-  Copy this inside the file you just created:
+    sudo nano /usr/lib/systemd/system/playmp3.service
+
+Copy this inside the file you just created:
 
     [Unit]
     Description=PlayMP3
@@ -39,6 +52,6 @@ Start on boot
     [Install]
     WantedBy=multi-user.target
 
-  To run the system on boot, do the following:
+To run the system on boot, do the following:
 
-  systemctl enable playmp3.service
+    systemctl enable playmp3.service
