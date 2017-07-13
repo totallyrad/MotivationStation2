@@ -55,3 +55,9 @@ Copy this inside the file you just created:
 To run the system on boot, do the following:
 
     sudo systemctl enable playmp3.service
+
+Setup the USB SoundCard
+
+    https://cdn-learn.adafruit.com/downloads/pdf/usb-audio-cards-with-a-raspberry-pi.pdf
+    
+    
