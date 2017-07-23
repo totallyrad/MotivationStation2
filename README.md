@@ -61,3 +61,15 @@ Setup the USB SoundCard
     https://cdn-learn.adafruit.com/downloads/pdf/usb-audio-cards-with-a-raspberry-pi.pdf
     
     
+Edit asound.conf to put the hardware sound card as primary. I'm using a CM 108 chipset soundcard
+
+    sudo nano /etc/asound.conf and put the following in the file and save
+
+
+    pcm.!default {
+        type hw card 1
+    }
+    ctl.!default {
+        type hw card 1
+    }
+    
