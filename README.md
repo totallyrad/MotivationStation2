@@ -12,7 +12,7 @@ Requires
   
 System mp3
 
-A file named "system.mp3" in the same directory as the python script will play before playing a radon mp3 from the USB stick
+A file named "system.mp3" in the same directory as the python script will play before playing a radom mp3 from the USB stick
 
 All of the other the mp3's have to be on an usb stick in a directory named "mp3"
 
@@ -31,7 +31,7 @@ and add the following line:
     
 Grant the script execute
 
-    sudo chmod -x /home/MotivationStation2/mp3.sh
+    sudo chmod +x /home/MotivationStation2/mp3.sh
   
 Start on boot
 
