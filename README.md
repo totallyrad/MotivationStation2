@@ -72,4 +72,15 @@ Edit asound.conf to put the hardware sound card as primary. I'm using a CM 108 c
     ctl.!default {
         type hw card 1
     }
+
+Shutdown button on Pin 5 and Gnd 
+
+Tutorial from https://pie.8bitjunkie.net/retropie-shutdown-and-startup-switch-the-easy-way#testing
     
+    curl https://pie.8bitjunkie.net/shutdown/setup-shutdown.sh --output setup-shutdown.sh
+
+    sudo chmod +x setup-shutdown.sh
+
+    sudo ./setup-shutdown.sh
+    
+This seemed to work better than putting a shutdown script in rc.local manually. 
